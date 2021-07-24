@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!--My CSS-->
+    <link rel="stylesheet" href="style.css" />
+    <title>My Portofoliio</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body id="home">
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Gemilangtech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="hacking.html">Hacking</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="stenography.html">Stenography</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--AKHIR NAVBAR-->
+
+
+    <!--STENOGRAPHY-->
+
+    <section id="about">
+        <div class="container">
+            <div class="row text-center mb-3">
+                <div class="col">
+                    <h2>STENOGRAPHY ONLINE TOOLS</h2>
+                </div>
+            </div>
+            <div class="row justify-content-center mb-4">
+                <div class="col-md-4">
+                    <div class="active-form-testimonials">
+                        <h4><span class="icon icon-lock4" aria-hidden="true"></span>Masukan/Buat Pesan Rahasia</h4>
+                        <p class="small">Upload Gambar <span class="label label-info">PNG</span> <span class="label labell-info">JPG</span> <span class="label label-info">GIF</span> <span class="label label-info">BMP</span></p>
+
+                        <form id="steganography-encode-form" action="/products/steganography-online-codec" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="_csrf" value="BTYWEawpCUw9wT_DGQ4wCviT9d61SnbV67OsAbwtTYd0WnJV32E7D0uufZJ_I2pvm_CfmIYARZjGyd1Ti2Uhtw==">
+                            <div class="form-group field-steganographyform-imageencode">
+
+                                <input type="hidden" name="SteganographyForm[imageencode]" value=""><input type="file" id="steganographyform-imageencode" class="form-control file-loading" name="SteganographyForm[imageencode]" accept="image/*" data-krajee-fileinput="fileinput_411d3a13">
+                                <!--[if lt IE 10]><br><div class="alert alert-warning"><strong>Note:</strong> Your browser does not support file preview and multiple file upload. Try an alternative or more recent browser to access these features.</div><script>document.getElementById("steganographyform-imageencode").className.replace(/\bfile-loading\b/,"");;</script><![endif]-->
+
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group field-steganographyform-password required">
+                                <label class="control-label" for="steganographyform-password">Enter encryption password</label>
+                                <input type="text" id="steganographyform-password" class="form-control" name="SteganographyForm[password]" autocomplete="off" aria-required="true">
+
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group field-steganographyform-message required">
+                                <label class="control-label" for="steganographyform-message">Enter text message</label>
+                                <textarea id="steganographyform-message" class="form-control" name="SteganographyForm[message]" rows="4" aria-required="true"></textarea>
+
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-info btn-block" name="encode-button"><span class="icon icon-lock5" aria-hidden="true"></span> Encode</button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <div class="active-form-testimonials">
+
+                        <h4><span class="icon icon-unlocked" aria-hidden="true"></span> Pecahkan Pesan Rahasia</h4>
+
+                        <p class="small">Upload Gambar Yang Ingin Dipecahkan Pesannya <span class="label label-success"></span></p>
+
+                        <form id="steganography-decode-form" action="/products/steganography-online-codec" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="_csrf" value="BTYWEawpCUw9wT_DGQ4wCviT9d61SnbV67OsAbwtTYd0WnJV32E7D0uufZJ_I2pvm_CfmIYARZjGyd1Ti2Uhtw==">
+                            <div class="form-group field-steganographyform-imagedecode">
+
+                                <input type="hidden" name="SteganographyForm[imagedecode]" value=""><input type="file" id="steganographyform-imagedecode" class="form-control file-loading" name="SteganographyForm[imagedecode]" accept="image/png" data-krajee-fileinput="fileinput_7f6e08e1">
+                                <!--[if lt IE 10]><br><div class="alert alert-warning"><strong>Note:</strong> Your browser does not support file preview and multiple file upload. Try an alternative or more recent browser to access these features.</div><script>document.getElementById("steganographyform-imagedecode").className.replace(/\bfile-loading\b/,"");;</script><![endif]-->
+
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group field-steganographyform-password required">
+                                <label class="control-label" for="steganographyform-password">Enter decryption password</label>
+                                <input type="text" id="steganographyform-password" class="form-control" name="SteganographyForm[password]" autocomplete="off" aria-required="true">
+
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <div class="form-group field-steganographyform-message">
+                                <label class="control-label" for="steganographyform-message">Decrypted text message</label>
+                                <textarea id="steganographyform-message" class="form-control" name="SteganographyForm[message]" rows="4"></textarea>
+
+                                <p class="help-block help-block-error"></p>
+                            </div>
+                            <button type="submit" class="btn btn-lg btn-success btn-block" name="decode-button"><span class="icon icon-unlocked2" aria-hidden="true"></span> Decode</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        </div>
+        </div>
+    </section>
+    <!--AKHIR STENOGRAPHY-->
+
+</body>
+
+</html>
